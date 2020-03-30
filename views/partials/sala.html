@@ -1,0 +1,19 @@
+<div ng-controller="chatSala" class="">
+    <div class="mensaje scrollbar scrollbar-primary"  >
+        <div class="listMens force-overflow" id="c">
+            <div ng-repeat="mC in listMensaje track by $index" class="msjContent"> 
+                <div class="" ng-class="mC.style" id="{{$index+1}}">
+                    <div class="" ng-class="mC.arrow"></div> 
+                    <h5 class="" ng-class="mC.h5">{{mC.nombre}}</h5>
+                    <p>{{mC.mensaje}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="input-group mb-3 inputText">
+        <input type="text" class="form-control" placeholder="Ingrese Mensaje" aria-label="Recipient's username" aria-describedby="button-addon2" ng-model="mensajeChat" ng-keyup="enter($event)">
+        <div class="input-group-append">
+          <button class="btn btn btn-primary" type="button" id="button-addon2" ng-click="enviar()" >Enviar</button>
+        </div>
+      </div>
+</div>

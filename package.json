@@ -1,0 +1,22 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "chat con nodejs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marco Velasquez Figarella",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.9",
+    "angular-route": "^1.7.9",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.4.1",
+    "consolidate": "^0.15.1",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0",
+    "socket.io-client": "^2.3.0"
+  }
+}

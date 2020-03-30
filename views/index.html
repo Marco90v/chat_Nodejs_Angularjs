@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" ng-app="chat">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <base href="/">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script href="bootstrap/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/myStyle.css">
+</head>
+<body ng-controller="controladorChat">
+
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="contentInput">
+                <label for="" class="etiqueta">Nombre de usuario: </label>
+                <input type="text" class="form-control form-control-sm nickName" ng-model='nombUser'>
+                <button type="button" class="btn btn-primary btn-sm" ng-click="iniciar()">Guardar nombre</button>
+                <button type="button" class="btn btn-primary btn-sm" ng-click="salir()">Salir de sala</button>
+                <button type="button" class="btn btn-primary btn-sm" ng-click="borrarChat()">Borrar chat</button>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col align-self-center">
+                <label for="" class="tituloChat">Sala de chat</label>
+                <div class="contChat border border-dark rounded">
+                    <div ng-view="ng-view" ></div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script src="angular/angular.min.js"></script>
+    <script src="angular-route/angular-route.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/angularChat.js"></script>
+
+</body>
+</html>
