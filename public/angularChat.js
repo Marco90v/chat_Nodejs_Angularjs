@@ -2,9 +2,7 @@ const chat = angular.module('chat',['ngRoute']);
 
 chat.config(['$routeProvider','$locationProvider',function ($routeProvider,$locationProvider){
     $routeProvider.
-    when('/sala',{
-        templateUrl: 'partials/sala'
-    });
+    when('/sala', { templateUrl: 'partials/sala' });
     $locationProvider.html5Mode(true);
 }]);
 
@@ -15,7 +13,7 @@ chat.controller('controladorChat',($scope,$http)=>{
         let usuario = recuperarName(); // recupera los datos del usuario
         $scope.nombUser = usuario.nombre;
         $scope.socket = io('http://localhost'); // conexión el socket
-        $scope.socket.emit('Nuevo',{nickName:$scope.nombUser, id: usuario.id!=null||usuario.id!=undefined?usuario.id:false}); // registra nuevo una usuario
+        $scope.socket.emit('Nuevo',{nickName:$scope.nombUser, id: usuario.id!=null||usuario.id!=undefined?usuario.id:false}); // registra nuevo usuario
         $scope.socket.on('id', ()=>{ cargarName(usuario.nombre,$scope.socket.id); }); // actualiza los datos del usuario según lo recibido del servidor (ID)
     }
 
@@ -24,7 +22,7 @@ chat.controller('controladorChat',($scope,$http)=>{
     // método para iniciar sesión, valida si existe el nombre de usuario, si no lo registra y redirecciona
     $scope.iniciar = function(){
         if($scope.nombUser){
-            $http.post('/valida',{n:'Marco'}).then((res)=>{
+            $http.post('/valida',{n: $scope.nombUser}).then((res)=>{
                 if(res.data){ alert('Nombre de usuario ya existe');
                 }else{
                     cargarName($scope.nombUser);

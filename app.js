@@ -60,7 +60,7 @@ io.on('connection', (socket)=>{
     socket.on('cerrar', ()=>{
         usuarios.forEach(nombre =>{
             if(nombre.id == socket.id){
-                socket.broadcast.emit('EnviarCliente',{nombre: nombre.usuario, mensaje:'Cerro Sesion'});
+                socket.broadcast.emit('EnviarCliente',{nombre: nombre.usuario, mensaje:'Cerro Sesión'});
                 socket.disconnect();
                 usuarios.splice(usuarios[nombre],1);
             }
