@@ -20,8 +20,8 @@ Se pueden eliminar los mensajes del localsotage con el botón borrar, e puede fi
 
 #### Vista de Inicio
 
-![Screenshot](https://raw.githubusercontent.com/Marco90v/Cuotas_controlDePago/master/caps/sistPago-cap-1.png)
+![Screenshot](https://raw.githubusercontent.com/Marco90v/chat_Nodejs_Angularjs/master/caps/chatNodejs-cap-1.png)
 
 #### Vista de chat
 
-![Screenshot](https://raw.githubusercontent.com/Marco90v/Cuotas_controlDePago/master/caps/sistPago-cap-1.png)
+![Screenshot](https://raw.githubusercontent.com/Marco90v/chat_Nodejs_Angularjs/master/caps/chatNodejs-cap-2.png)
